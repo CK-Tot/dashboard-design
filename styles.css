@@ -9,7 +9,7 @@
 
 .grid-container{
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 250px 1fr;
     grid-template-rows: 100px 1fr;
     height: 100vh;
     width: 100%;
@@ -18,23 +18,89 @@
 
 
 .sidebar{
-    background-color: rgb(238, 238, 233);
+    background-color: #011326;
+    color: #ececec;
     grid-row: 1/ 3;
     padding: 20px 5%;
+    position: sticky;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
 }
+
+.sidebar  .logo  a{
+    font-size: 19px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+}
+
+.sidebar  .logo  a span {
+    color: #05b983;
+    font-weight: bold;
+}
+
+
+
+.sidebar .nav {
+    margin: 30px 5%;
+}
+
+.sidebar .nav ul li {
+    list-style: none;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.sidebar .nav ul .selected  {
+    background-color: #4dabf7;
+    padding: 10px;
+    color: #343131;
+}
+
+
+.sidebar .nav ul li a:hover {
+    background-color: #4dabf7;
+    padding: 10px;
+    color: #343131;
+}
+
+
+
+
+
+
+
+.sidebar .nav ul li a {
+    color: #c6c4c4;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    line-height: 1.6;
+}
+
+
 
 
 .navbar{
     background-color: #fff;
     padding: 10px 5%;
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid #ccc;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
 }
 
 
 .main-content {
     padding: 10px 8%;
+    overflow-y: auto;
 }
 
 .navbar button{
